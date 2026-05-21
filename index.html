@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El continent que envelleix – Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1714;
+    --ink-mid: #3d3830;
+    --ink-light: #7a7268;
+    --ink-faint: #c4bdb4;
+    --cream: #f7f3ee;
+    --cream-dark: #ede8e1;
+    --rust: #8b3a1e;
+    --rust-light: #c2573a;
+    --gold: #b8933a;
+    --col-width: 720px;
+  }
+
+  html { background: var(--cream); color: var(--ink); }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.78;
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .masthead {
+    border-top: 4px solid var(--ink);
+    border-bottom: 1px solid var(--ink-faint);
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .masthead-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+  .masthead-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: .08em;
+  }
+
+  .hero {
+    max-width: var(--col-width);
+    margin: 0 auto;
+    padding: 4.5rem 2.5rem 2.5rem;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .rubric {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 1.4rem;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.6rem, 6vw, 4.6rem);
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .deck {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.18rem;
+    font-weight: 300;
+    color: var(--ink-mid);
+    line-height: 1.6;
+    max-width: 580px;
+    border-left: 3px solid var(--rust);
+    padding-left: 1.2rem;
+    margin: 1.8rem 0 2rem;
+  }
+
+  .byline {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+  .byline span { color: var(--ink); }
+
+  .body-wrap {
+    max-width: var(--col-width);
+    margin: 0 auto;
+    padding: 0 2.5rem 6rem;
+  }
+
+  .section { margin-top: 3.8rem; }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--rust);
+    border-top: 1px solid var(--rust);
+    padding-top: .5rem;
+    margin-bottom: 1.6rem;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.4rem;
+    color: var(--ink);
+  }
+
+  p { margin-bottom: 1.35rem; }
+
+  .pull {
+    margin: 3rem -2.5rem;
+    padding: 2.5rem 3rem;
+    background: var(--ink);
+    color: var(--cream);
+  }
+  .pull-text {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 3vw, 1.85rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.38;
+    color: var(--cream);
+  }
+  .pull-attr {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-top: 1rem;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--ink-faint);
+    border: 1px solid var(--ink-faint);
+    margin: 2.8rem 0;
+  }
+  .stat-box {
+    background: var(--cream);
+    padding: 1.6rem;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--rust);
+    display: block;
+  }
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-top: .4rem;
+    display: block;
+  }
+  .stat-note {
+    font-size: 13px;
+    color: var(--ink-light);
+    margin-top: .4rem;
+    line-height: 1.5;
+  }
+
+  .data-aside {
+    float: right;
+    width: 210px;
+    margin: .2rem 0 1.5rem 2.2rem;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--ink-faint);
+    padding: 1rem 0;
+    clear: right;
+  }
+  .data-aside-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: .9rem;
+  }
+  .data-aside table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .data-aside td {
+    padding: 4px 0;
+    color: var(--ink-mid);
+    border-bottom: 1px solid var(--cream-dark);
+    line-height: 1.4;
+  }
+  .data-aside td:last-child {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--rust);
+  }
+
+  .ornament {
+    text-align: center;
+    color: var(--rust-light);
+    font-size: 1rem;
+    margin: 2.5rem 0;
+    letter-spacing: .6rem;
+    opacity: .45;
+  }
+
+  .inline-highlight {
+    background: var(--cream-dark);
+    border-left: 3px solid var(--gold);
+    padding: .8rem 1.2rem;
+    margin: 2rem 0;
+    font-size: .95rem;
+    color: var(--ink-mid);
+    font-style: italic;
+  }
+
+  .source-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--ink-faint);
+    letter-spacing: .06em;
+    border-top: 1px solid var(--cream-dark);
+    padding-top: 1.2rem;
+    margin-top: 3.5rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .stat-row { grid-template-columns: 1fr; }
+    .pull { margin: 2rem -1.5rem; padding: 1.8rem; }
+    .data-aside { float: none; width: 100%; margin: 1.5rem 0; }
+    h1 { font-size: 2.4rem; }
+    .body-wrap { padding: 0 1.5rem 4rem; }
+    .hero { padding: 3rem 1.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     PÀGINA DE PORTADA / ÍNDEX EDITORIAL
+     ═══════════════════════════════════════ -->
+<div class="cover-page">
+
+  <div class="cover-top-rule"></div>
+
+  <div class="cover-meta">
+    <span class="cover-series">Informe Demogràfic</span>
+    <span class="cover-date">21 de maig de 2026 · Dades: Eurostat</span>
+  </div>
+
+  <div class="cover-center">
+    <div class="cover-eyebrow">Europa davant el mirall</div>
+    <h1 class="cover-title">Població,<br>envelliment<br>i futur</h1>
+    <p class="cover-intro">Aquest informe neix de les dades difoses avui per l'Eurostat en la seva edició 2026 de <em>Demography of Europe</em>. Partint d'una lectura rigorosa de les xifres actuals, s'articula en dos blocs complementaris: una diagnosi del present i un exercici de prospecció cap al 2035. Llegits junts, ofereixen un retrat complet d'un continent en transformació demogràfica profunda.</p>
+  </div>
+
+  <div class="cover-blocks">
+
+    <a class="cover-block" href="#part-one">
+      <div class="cover-block-num">I</div>
+      <div class="cover-block-body">
+        <div class="cover-block-label">Diagnosi · 2026</div>
+        <div class="cover-block-title">El continent que envelleix</div>
+        <div class="cover-block-desc">Una lectura detallada de les dades actuals: estructura de la població, envelliment accelerat, fluxos migratoris i les diferències profundes entre estats membres. El retrat d'Europa tal com és avui.</div>
+        <div class="cover-block-arrow">Llegir la primera part →</div>
+      </div>
+    </a>
+
+    <a class="cover-block" href="#part-two">
+      <div class="cover-block-num">II</div>
+      <div class="cover-block-body">
+        <div class="cover-block-label">Prospectiva · 2035</div>
+        <div class="cover-block-title">Europa, deu anys més vella</div>
+        <div class="cover-block-desc">Si les tendències actuals es mantenen, on serem el 2035? Un exercici de prospecció sobre pensions, mercat laboral, sanitat, immigració i territoris. El retrat d'Europa tal com probablement serà.</div>
+        <div class="cover-block-arrow">Llegir la segona part →</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="cover-note">
+    Les projeccions de la segona part s'han construït per extrapolació de les tendències documentades i no constitueixen dades oficials d'Eurostat. · Font principal: <em>Eurostat, Demography of Europe 2026</em>
+  </div>
+
+</div>
+
+<style>
+  .cover-page {
+    min-height: 100vh;
+    background: var(--ink);
+    color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 5rem;
+  }
+
+  .cover-top-rule {
+    height: 5px;
+    background: var(--rust);
+    width: 100%;
+  }
+
+  .cover-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.4rem 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .cover-series {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--rust-light);
+  }
+  .cover-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .08em;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .cover-center {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 5rem 3rem 3.5rem;
+    width: 100%;
+  }
+
+  .cover-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: var(--rust-light);
+    margin-bottom: 1.5rem;
+  }
+
+  h1.cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -.03em;
+    color: var(--cream);
+    margin-bottom: 2.5rem;
+  }
+
+  .cover-intro {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(247,243,238,0.7);
+    max-width: 560px;
+    border-left: 2px solid var(--rust);
+    padding-left: 1.2rem;
+  }
+  .cover-intro em { color: rgba(247,243,238,0.9); font-style: italic; }
+
+  .cover-blocks {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .cover-block {
+    background: rgba(255,255,255,0.03);
+    padding: 2.2rem 2rem;
+    display: flex;
+    gap: 1.4rem;
+    text-decoration: none;
+    transition: background .2s;
+    cursor: pointer;
+  }
+  .cover-block:hover {
+    background: rgba(255,255,255,0.07);
+  }
+
+  .cover-block-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--rust);
+    flex-shrink: 0;
+    width: 2.5rem;
+  }
+
+  .cover-block-body { flex: 1; }
+
+  .cover-block-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: .5rem;
+  }
+
+  .cover-block-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--cream);
+    margin-bottom: .8rem;
+  }
+
+  .cover-block-desc {
+    font-family: 'Source Serif 4', serif;
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(247,243,238,0.55);
+    margin-bottom: 1rem;
+  }
+
+  .cover-block-arrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--rust-light);
+  }
+
+  .cover-note {
+    max-width: 720px;
+    margin: 2rem auto 0;
+    padding: 0 3rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .05em;
+    color: rgba(255,255,255,0.2);
+    line-height: 1.7;
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .cover-blocks { grid-template-columns: 1fr; }
+    .cover-center, .cover-blocks, .cover-note { padding-left: 1.5rem; padding-right: 1.5rem; }
+    h1.cover-title { font-size: 3.5rem; }
+    .cover-meta { padding: 1.2rem 1.5rem; }
+  }
+</style>
+
+<header id="part-one" class="masthead">
+  <div class="masthead-title">Anàlisi · Demografia europea</div>
+  <div class="masthead-date">21 de maig de 2026 · Dades: Eurostat</div>
+</header>
+
+<article>
+  <div class="hero">
+    <div class="rubric">Editorial · Conjuntura europea</div>
+    <h1>El continent<br>que <em>envelleix</em></h1>
+    <p class="deck">L'edat mediana d'un europeu ha pujat gairebé sis anys en dues dècades. Darrere d'un indicador estadístic s'hi amaga una transformació civilitzatòria sense precedents que cap política pot seguir ignorant.</p>
+    <div class="byline">Editorial · Basat en <span>Eurostat, Demography of Europe · Edició 2026</span></div>
+  </div>
+
+  <div class="body-wrap">
+
+    <div class="section">
+      <p>Hi ha xifres que no ocupen portades però que ho canvien tot. Una d'elles és aquesta: l'edat que divideix exactament en dos la població europea —la meitat és més jove, l'altra meitat és més gran— era de 44,9 anys l'1 de gener de 2025. Vint anys enrere, la mateixa mesura marcava 39,6 anys. Un avançament de cinc anys i tres mesos en dues dècades. En termes demogràfics, és un terratrèmol a càmera lenta.</p>
+
+      <p>L'Eurostat ha publicat avui la nova edició del seu informe <em>Demography of Europe</em>, i les dades que conté dibuixen un continent que, de manera silenciosa però inexorable, trasllada el seu centre de gravetat generacional cap a edats cada cop més avançades. No es tracta d'una notícia, en el sentit periodístic de la paraula. Es tracta d'un procés que dura dècades i que, precisament per la seva lentitud, tendim a subestimar fins que les seves conseqüències es tornen inajornables. I en alguns àmbits —les pensions, la sanitat, el mercat de treball, la pressió fiscal— aquell moment ja ha arribat.</p>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <span class="stat-num">44,9</span>
+        <span class="stat-label">Edat mediana UE · 2025</span>
+        <p class="stat-note">Era de 39,6 anys el 2005. Un increment de 5,3 anys en dues dècades.</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">22%</span>
+        <span class="stat-label">Majors de 65 anys · 2025</span>
+        <p class="stat-note">El 2005 eren el 17%. Ara representen 99 milions de persones a la UE.</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">6%</span>
+        <span class="stat-label">Majors de 80 anys · 2025</span>
+        <p class="stat-note">El grup que ha crescut en tots i cadascun dels 27 estats membres sense excepció.</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">49,1</span>
+        <span class="stat-label">Edat mediana a Itàlia · 2025</span>
+        <p class="stat-note">El país més envellit de la Unió. Portugal i Bulgària el segueixen amb 47,3 anys.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">I · Les arrels del fenomen</span>
+      <h2>Quan la prosperitat genera buits demogràfics</h2>
+
+      <p>L'envelliment demogràfic d'Europa té dos motors principals que actuen simultàniament: la caiguda de la natalitat i l'allargament de l'esperança de vida. Tots dos, paradoxalment, són resultat de l'èxit: de millores en la medicina, en l'educació, en les condicions de vida material. Però el seu efecte combinat crea una equació que les societats contemporànies encaren amb una barreja d'incredulitat i procrastinació.</p>
+
+      <p>Des de fa dècades, la taxa de fecunditat de la majoria de països europeus es troba per sota del llindar de reemplaçament generacional, fixat en 2,1 fills per dona. Espanya, Itàlia, Grècia, Portugal o els països de l'Europa de l'Est porten anys amb taxes molt per sota d'aquest valor. El resultat és mecànic i inevitable: cada generació és més petita que l'anterior. I quan, alhora, les persones viuen molt més anys, la piràmide de la població deixa de ser una piràmide. Es converteix en quelcom que s'assembla més a un gerro o a una estalactita: ample a dalt, prim a baix.</p>
+
+      <p>Les dades d'avui ho confirmen amb una cruesa incontestable. El percentatge de nens i joves menors de 15 anys a la UE ha caigut fins al 14% de la població total. Irlanda és, novament, l'excepció que confirma la regla, amb un 19% gràcies a una natalitat relativament alta i a una immigració jove. Itàlia lidera la tendència inversa: només el 12% dels italians té menys de quinze anys. Vist des d'un altre angle: pràcticament la meitat de la població italiana té més de 47 anys. Cap societat industrial avançada havia assolit mai un nivell d'envelliment semblant.</p>
+    </div>
+
+    <div class="pull">
+      <p class="pull-text">"L'envelliment d'Europa no és una crisi que s'acosta a l'horitzó. És una transformació que ja és aquí, que porta dècades desplegant-se i que la política ha tingut la tendència sistemàtica d'ajornar fins que es torna inajornable."</p>
+      <div class="pull-attr">Editorial · Eurostat, Demography of Europe 2026</div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">II · Una geografia de la senectut</span>
+      <h2>No tots els països envelleixen igual ni al mateix ritme</h2>
+
+      <div class="data-aside">
+        <div class="data-aside-title">Edat mediana per país (2025)</div>
+        <table>
+          <tr><td>Itàlia</td><td>49,1 a.</td></tr>
+          <tr><td>Bulgària</td><td>47,3 a.</td></tr>
+          <tr><td>Portugal</td><td>47,3 a.</td></tr>
+          <tr><td>Grècia</td><td>47,2 a.</td></tr>
+          <tr><td>Alemanya</td><td>45,9 a.</td></tr>
+          <tr><td>UE-27</td><td>44,9 a.</td></tr>
+          <tr><td>França</td><td>43,0 a.</td></tr>
+          <tr><td>Suècia</td><td>41,2 a.</td></tr>
+          <tr><td>Luxemburg</td><td>39,8 a.</td></tr>
+          <tr><td>Irlanda</td><td>39,6 a.</td></tr>
+        </table>
+      </div>
+
+      <p>Si hi ha una lliçó que cal extreure de les dades de l'Eurostat és que l'envelliment no és un fenomen uniforme. Existeix, dins de la mateixa Unió Europea, una fractura demogràfica profunda entre els països que s'han envellit de forma accelerada i els que han aconseguit mantenir una estructura generacional relativament equilibrada. I aquesta fractura, en gran mesura, dibuixa el mateix mapa que les desigualtats econòmiques que han definit les tensions internes de la UE des de fa dues dècades.</p>
+
+      <p>Romania és potser el cas més colpidor. Ha vist augmentar l'edat mediana de la seva població en 8,6 anys en només vint anys —el major increment de tot Europa—, mentre perdia el 11% dels seus habitants per emigració. Portugal i Grècia han seguit un camí semblant: cada any es marquen nous rècords d'envelliment mentre els joves marxen a cercar oportunitats fora. La combinació de baixa natalitat, emigració dels sectors d'edat activa i retorn dels emigrants ja grans configura una espiral difícil de revertir a curt termini.</p>
+
+      <p>A l'extrem oposat, Irlanda i Luxemburg —amb edats medianes de 39,6 i 39,8 anys respectivament— representen una via alternativa possible. Irlanda ha mantingut una natalitat relativament alta en el context europeu i ha atret immigració qualificada. Luxemburg, pel seu model econòmic singular, és el país de la UE on la immigració intracomunitària representa una proporció major de la població: el 36% dels seus residents procedeix d'un altre estat membre. En certa mesura, Luxemburg s'ha convertit en una demostració empírica que la immigració pot compensar el dèficit demogràfic natiu, si bé és un model difícilment extrapolable a escala continental.</p>
+
+      <p>Suècia, amb 41,2 anys, és un altre cas d'estudi rellevant. Malgrat pertànyer a l'Europa septentrional —tradicionalment menys afectada per l'emigració que el sud— ha aconseguit mantenir una estructura demogràfica comparativament jove gràcies a dècades de polítiques familiars robustes i d'acollida d'immigrants. El seu increment de l'edat mediana des del 2005 ha estat, amb diferència, el menor de tota la Unió: tan sols 1,1 anys en dues dècades. Per comparació, Romania ha avançat gairebé nou anys en el mateix període.</p>
+    </div>
+
+    <div class="ornament">— · —</div>
+
+    <div class="section">
+      <span class="section-label">III · El pes dels anys</span>
+      <h2>Quan un de cada quatre europeus té més de 65 anys</h2>
+
+      <p>Els 99 milions de persones majors de 65 anys que viuen avui a la Unió Europea —el 22% de la població total— no són únicament una realitat estadística. Representen una pressió estructural enorme sobre els sistemes públics. La sanitat, les pensions, la dependència: tot el que una societat destina a les persones que han sortit del mercat laboral actiu i que sovint requereixen una atenció creixent. I el percentatge no ha deixat de créixer: el 2005 era el 17%. La trajectòria és tan clara com preocupant.</p>
+
+      <p>Però el fenomen més significatiu dels últims vint anys no és el creixement del grup de més de 65 anys, sinó el del grup de més de 80. Avui, el 6% dels europeus —prop de 27 milions de persones— supera els vuitanta anys. És el segment que ha crescut a tots i cadascun dels 27 estats membres sense excepció. I és també el segment que requereix més recursos: hospitalitzacions freqüents, medicació crònica, atenció a la dependència, serveis socials especialitzats. Grècia, Portugal, Letònia, Alemanya, Eslovènia, Itàlia, Estònia, Lituània i Croàcia han vist créixer aquest grup en tres punts percentuals o més des del 2005. Tres punts, en termes absoluts, representen desenes de milers de persones en cada país que han passat a necessitar un nivell d'atenció que l'Estat no sempre estava preparat per oferir.</p>
+
+      <div class="inline-highlight">
+        Itàlia registra gairebé el 8% de la seva població per sobre dels 80 anys. Alemanya, Grècia i Portugal el segueixen amb un 7%. Són societats on, literalment, un de cada tretze o catorze habitants té vuitanta anys o més.
+      </div>
+
+      <p>La qüestió que això planteja als sistemes de pensions és d'una magnitud extraordinària. El model de repartiment —en el qual les cotitzacions dels treballadors actius financen les pensions dels jubilats— funciona amb una lògica matemàtica que requereix un cert equilibri entre el nombre de cotitzants i el nombre de perceptors. Quan aquest equilibri s'altera de forma persistent i estructural, com passa a Europa, el sistema necessita reformes que cap govern abraça de bon grat perquè impliquen, invariablement, alguna combinació de tres mesures impopulars: augmentar les cotitzacions, reduir les prestacions o endarrerir l'edat de jubilació. El debat polític europeu dels últims anys, dels carrers de París als parlaments de Madrid o Roma, s'explica en gran part per la dificultat de gestionar políticament allò que la demografia fa inevitable.</p>
+    </div>
+
+    <div class="pull">
+      <p class="pull-text">"Noranta-nou milions d'europeus tenen més de 65 anys. Aquesta xifra no deixarà de créixer. La pregunta no és si les societats hauran d'adaptar-se, sinó si ho faran amb previsió o sota la pressió de l'emergència."</p>
+      <div class="pull-attr">Perspectiva analítica · Dades Eurostat 2026</div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">IV · La immigració com a variable</span>
+      <h2>Sis milions d'entrades, però no és tan senzill</h2>
+
+      <div class="data-aside">
+        <div class="data-aside-title">Immigrants el 2024 (destinació)</div>
+        <table>
+          <tr><td>Espanya</td><td>1.289.000</td></tr>
+          <tr><td>Alemanya</td><td>1.079.000</td></tr>
+          <tr><td>Itàlia</td><td>452.000</td></tr>
+          <tr><td>França</td><td>439.000</td></tr>
+          <tr><td>Altres 23</td><td>~2.700.000</td></tr>
+        </table>
+      </div>
+
+      <p>Quan s'aborda l'envelliment europeu, la immigració sol aparèixer com la resposta evident: si la població autòctona no es reprodueix prou per mantenir la piràmide, que arribin persones de fora que ho compensin. Les dades de l'Eurostat constaten que aquest flux ja és una realitat de magnitud considerable: l'any 2024, gairebé sis milions de persones van immigrar a la Unió Europea. El 74% —prop de 4,2 milions— provenien de fora de la UE. Espanya va ser el primer país receptor amb 1,29 milions d'entrades, seguida d'Alemanya amb 1,08 milions.</p>
+
+      <p>L'estructura d'edat d'aquesta immigració confirma que sí, efectivament, els nouvinguts tendeixen a ser significativament més joves que la població nacional. Els homes de 20 a 49 anys representen el 29% de la població no nacional, enfront del 18% dels nationals. Les dones del mateix grup d'edat suposen el 27% dels no nacionals, davant el 17% dels nacionals. La immigració, per tant, no és una solució màgica però sí que aporta un rejoveniment real i mesurable de l'estructura demogràfica dels països receptors.</p>
+
+      <p>Ara bé, el debat és més complex del que suggereix l'aritmètica demogràfica. En primer lloc, perquè la distribució de la immigració és profundament desigual: quatre països —Espanya, Alemanya, Itàlia i França— absorbeixen el 57% de totes les entrades. Els estats membres menys atractius econòmicament, que sovint coincideixen amb els que tenen les estructures demogràfiques més deteriorades, reben fluxos molt menors. En segon lloc, perquè la immigració no és una aixeta que els governs puguin regular amb precisió quirúrgica: respon a xarxes familiars i comunitàries, a mercats laborals, a polítiques d'integració, a la percepció que els mateixos immigrants tenen del país de destinació.</p>
+
+      <p>I en tercer lloc —la qüestió que la política europea és menys propensa a afrontar obertament— perquè la immigració massiva sense integració efectiva genera tensions socials que han demostrat, en diversos països, una capacitat de destabilització política considerable. El repte no és tant si Europa necessita immigrants —les dades mostren que sí, de manera estructural— sinó com construir societats capaces d'incorporar aquestes persones de manera digna, eficient i cohesionada. Allí on s'ha sabut fer, com Suècia durant dècades o Irlanda més recentment, els resultats demogràfics i econòmics han estat positius. Allí on ha predominat la gestió reactiva i la instrumentalització electoral del fenomen migratori, els resultats han estat pitjors per a tothom.</p>
+    </div>
+
+    <div class="ornament">— · —</div>
+
+    <div class="section">
+      <span class="section-label">V · La dimensió invisible</span>
+      <h2>L'economia de la cura i el treball de les dones</h2>
+
+      <p>Hi ha una dimensió de l'envelliment europeu que les estadístiques de l'Eurostat capturen parcialment però que mereix ser nomenada amb tota la claredat: l'envelliment recau de forma desproporcionada sobre les dones. El 2025, hi havia a la UE 230 milions de dones i 221 milions d'homes. La diferència —9 milions de persones— s'explica principalment per la major longevitat femenina. Les dones viuen més, però també envelleixen soles amb més freqüència: vídues, en molts casos, en una franja d'edat —de 70 en endavant— en què les necessitats d'atenció i companyia creixen exponencialment.</p>
+
+      <p>L'edat mediana de les dones europees és de 46,5 anys, enfront dels 43,3 anys dels homes. Tres anys de diferència que, en el marc d'una societat que envelleix, comporten conseqüències molt concretes. Les dones no sols envelleixen amb un capital de pensions sovint inferior al dels homes —per les bretxes salarials i les carreres laborals interrompudes per la maternitat i la cura—, sinó que sovint porten el pes invisible de cuidar els seus propis progenitors ancians o els del cònjuge. Quan parlem de l'economia de la cura, un dels grans reptes del segle XXI europeu, estem parlant en gran mesura d'un treball que recau sobre les espatlles de les dones de mitjana edat.</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">VI · Les ciutats, els pobles i el buit</span>
+      <h2>L'envelliment desigual del territori</h2>
+
+      <p>Les dades nacionals amaguen una realitat territorial encara més aguda. L'envelliment no es distribueix uniformement dins de cada país: es concentra en els espais rurals i en les regions perifèriques, mentre les àrees metropolitanes —alimentades per migracions internes i internacionals— mantenen estructures demogràfiques relativament més joves. El resultat és un territori fraccionat: d'una banda, ciutats que absorbeixen talent i joventut, que generen creixement econòmic i que concentren les infraestructures; de l'altra, comarques i pobles que perden joves any rere any, que veuen tancar escoles per falta d'alumnes, que pateixen la desaparició progressiva dels serveis bàsics.</p>
+
+      <p>Aquesta geografia de l'envelliment és una de les causes més profundes del que en els últims anys s'ha anomenat "la revolta de les perifèries": el vot de protesta, la desafecció institucional, el suport als moviments populistes que s'alimenten de la sensació d'abandonament. Les regions que envelleixen no perden tan sols habitants; perden veu política, capacitat fiscal i pes en les decisions col·lectives. I sovint perceben que les capitals, les universitats, els mitjans de comunicació, el poder, en definitiva, les ignoren o les utilitzen com a argument de campanyes que no canvien res estructuralment.</p>
+
+      <p>Atendre l'envelliment territorial és, per tant, no tan sols una qüestió de política social o sanitària: és una qüestió de cohesió democràtica. Societats on una meitat del territori envelleix en l'oblit mentre l'altra meitat prospera a les metròpolis no es mantenen socialment estables a llarg termini.</p>
+    </div>
+
+    <div class="pull">
+      <p class="pull-text">"Les regions que envelleixen no perden tan sols habitants: perden veu, pes fiscal i presència en les decisions col·lectives. L'envelliment territorial és, al seu fons, un problema de democràcia."</p>
+      <div class="pull-attr">Editorial · Anàlisi territorial</div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">VII · El que les dades no diuen</span>
+      <h2>L'envelliment actiu i la trampa de la narrativa catastrofista</h2>
+
+      <p>Cal, tanmateix, fer un advertiment contra la narrativa purament catastrofista. Les persones grans no són un mer cost social: són consumidors, voluntaris, cuidadors informals, transmissors de coneixement i experiència. Una part creixent de la innovació en serveis, tecnologia assistencial, habitatge adaptat o turisme sènior s'explica precisament per l'ampliació d'aquest segment demogràfic. Els 99 milions d'europeus majors de 65 anys representen un poder adquisitiu, una capacitat política i un potencial de participació social que les societats intel·ligents aprenen a aprofitar en lloc de lamentar.</p>
+
+      <p>L'envelliment actiu —el paradigma que aposta per mantenir les persones grans integrades en la vida social, laboral voluntària i comunitària el màxim de temps possible— és una de les línies estratègiques sobre les quals hi ha major consens acadèmic i menor concreció política. La Organització Mundial de la Salut, la Comissió Europea i nombroses institucions internacionals porten anys reclamant un canvi de perspectiva: deixar de veure les persones grans exclusivament com a perceptors de serveis i pensar-les com a actors socials amb agència pròpia. El problema és que les polítiques concretes que farien operatiu aquest canvi de paradigma —adaptació del mercat laboral, finançament de l'atenció domiciliària, urbanisme inclusiu— requereixen inversions i voluntat política que rarament apareixen juntes.</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">VIII · Reflexió final</span>
+      <h2>La decisió que cada generació ha de prendre</h2>
+
+      <p>L'informe de l'Eurostat publicat avui no és alarmant en el to. És, com correspon a una institució estadística, un conjunt ordenat i seriós de dades. Però les dades parlen. I el que diuen és que Europa té davant seu un canvi estructural de primer ordre, que cap política pot resoldre amb un únic instrument i que requerirà, simultàniament, adaptar els sistemes de protecció social, repensar les polítiques de natalitat i conciliació, gestionar la immigració amb serietat i visió de futur, invertir en els territoris que s'han quedat enrere i canviar la manera com les societats europees miren les persones grans.</p>
+
+      <p>Cap d'aquestes coses és impossible. Cap és, tècnicament, un misteri sense solució. El que sí que resulta difícil, i aquí rau el nucli del problema, és fer-les totes alhora, en un context de fragmentació política creixent, de pressió sobre els pressupostos públics i d'un debat democràtic on el termini electoral sovint guanya al termini generacional.</p>
+
+      <p>L'edat mediana de 44,9 anys és una fotografia d'un moment. D'aquí a vint anys serà una altra. La pregunta que les dades de l'Eurostat plantegen —i que les generacions actives d'Europa hem de respondre— és si serem capaços de preparar les institucions, les infraestructures i les cultures per a aquella fotografia futura. O si, com tantes vegades en la història de les transicions demogràfiques, deixarem que la urgència del present ens impedeixi veure la inevitabilitat del canvi que ja s'ha posat en marxa.</p>
+
+      <p>El continent envelleix. La pregunta no és si cal actuar. La pregunta és quan i com.</p>
+    </div>
+
+    <div class="source-note">
+      Font de les dades: Eurostat, <em>Demography of Europe – 2026 edition</em>, publicat el 21 de maig de 2026. 
+      Inclou dades de: <em>Population structure and ageing</em>, <em>Migration and asylum</em>, <em>Demography-population stock and balance</em>. 
+      Totes les dades demogràfiques fan referència a l'1 de gener de 2025 llevat que s'indiqui el contrari. 
+      Dades d'immigració i emigració corresponen a l'any 2024.
+    </div>
+
+  </div>
+</article>
+
+</body>
+</html>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEGONA PART: PROSPECTIVA 2035
+     ═══════════════════════════════════════════════════════════ -->
+
+<div id="part-two" style="border-top: 4px solid var(--ink); margin-top: 0;">
+  <div class="masthead">
+    <div class="masthead-title">Prospectiva · Horitzó 2035</div>
+    <div class="masthead-date">Projeccions a deu anys vista</div>
+  </div>
+</div>
+
+<article>
+  <div class="hero">
+    <div class="rubric">Segona part · Exercici de prospectiva</div>
+    <h1>Europa, 2035:<br><em>deu anys</em> més vella</h1>
+    <p class="deck">Si les tendències demogràfiques actuals es mantenen sense variació significativa, el continent que coneixem avui serà, d'aquí a una dècada, un lloc reconeixible però profundament transformat. Aquí, el retrat probable d'un futur que ja ha començat.</p>
+    <div class="byline">Exercici de prospectiva · Basat en <span>Eurostat 2026 i tendències estructurals documentades</span></div>
+  </div>
+
+  <div class="body-wrap">
+
+    <div class="section">
+      <p>La prospectiva no és profecia. És el treball rigorós de projectar cap al futur les tendències que ja existeixen, amb consciència de les seves inèrcies i dels seus límits. La demografia és, de totes les ciències socials, la que permet fer projeccions amb major solidesa: les persones que tindran 65 anys el 2035 ja han nascut, ja viuen entre nosaltres, ja han format —o no han format— famílies. El futur demogràfic d'Europa a deu anys vista no és una conjectura: és, en gran mesura, una aritmètica.</p>
+      <p>L'exercici que segueix parteix d'una premissa deliberadament conservadora: que les tendències estructurals descrites a la primera part d'aquest informe —envelliment progressiu, baixa natalitat, immigració sostinguda però desigual, diferències marcades entre estats membres— es mantenen sense ruptures significatives. No hi ha cap catàstrofe demogràfica sobtada, però tampoc cap canvi de política transformador. És, en termes tècnics, l'escenari de continuïtat. I és, malauradament, l'escenari més probable.</p>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <span class="stat-num">~47</span>
+        <span class="stat-label">Edat mediana UE · 2035 (proj.)</span>
+        <p class="stat-note">Increment esperat de ~2 anys respecte als 44,9 de 2025. Itàlia podria superar els 51 anys.</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">25–26%</span>
+        <span class="stat-label">Majors de 65 anys · 2035 (proj.)</span>
+        <p class="stat-note">Un de cada quatre europeus tindrà més de 65 anys. Tres punts més que avui.</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">~450 M</span>
+        <span class="stat-label">Població UE · 2035 (proj.)</span>
+        <p class="stat-note">Estancament o lleugera davallada. La immigració compensarà parcialment el dèficit natural.</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">7–8%</span>
+        <span class="stat-label">Majors de 80 anys · 2035 (proj.)</span>
+        <p class="stat-note">De 27 milions actuals a prop de 35 milions. El grup de creixement més ràpid de la UE.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">I · La bomba de rellotgeria que ja fa tic-tac</span>
+      <h2>La generació del baby boom arriba a la vellesa</h2>
+
+      <p>El fenomen més determinant de la propera dècada té nom propi: el baby boom. Les persones nascudes entre 1955 i 1965 —el nucli dur de la gran generació expansiva del segle XX europeu— tindran entre 70 i 80 anys el 2035. Seran la generació de pensionistes més nombrosa de la història europea. I ho seran simultàniament a tots els grans països de la Unió: a Alemanya, a França, a Itàlia, a Espanya, als Països Baixos. No hi haurà cap finestra temporal en la qual uns països puguin aprendre dels errors dels altres; tots afrontaran la mateixa pressió al mateix temps.</p>
+
+      <p>Això vol dir, en termes concrets, que el nombre de persones que sortiran del mercat laboral durant la pròxima dècada superarà amb escreix el nombre de joves que hi entraran. La ratio de dependència —la proporció entre persones en edat de treballar i persones jubilades— empitjorarà de forma accelerada. Si avui hi ha aproximadament tres persones en edat activa per cada jubilat, la tendència apunta que el 2035 aquesta proporció s'haurà reduït a menys de dues i mitja en els països més envellits. En països com Itàlia, Grècia o Portugal, la pressió serà encara més aguda.</p>
+
+      <div class="inline-highlight">
+        Les persones que tindran 70 anys el 2035 ja existeixen. Ja cotitzen —o han deixat de cotitzar. Ja han format —o no han format— les famílies que haurien d'alimentar el sistema. El futur de les pensions europees no és una incògnita: és una projecció que els governs porten dues dècades mirant de reüll.
+      </div>
+
+      <p>Les implicacions fiscals d'aquest canvi seran formidables. Els sistemes de pensions de repartiment europeus —que financen les jubilacions actuals amb les cotitzacions dels treballadors d'avui— necessitaran o bé més ingressos, o bé menys despesa, o bé alguna combinació d'ambdues coses. En termes polítics, això es tradueix en l'equació que cap govern vol posar sobre la taula però que la realitat acabarà imposant: pujar l'edat de jubilació, reduir la taxa de substitució (la proporció entre la pensió i el darrer salari), augmentar les cotitzacions o assumir un dèficit estructural creixent finançat amb deute.</p>
+    </div>
+
+    <div class="pull">
+      <p class="pull-text">"D'aquí a deu anys, un de cada quatre europeus tindrà més de 65 anys. Tres de cada quatre d'aquests majors de 65 seran part de la generació del baby boom. Mai en la història moderna cap continent havia tingut una proporció semblant de jubilats simultanis."</p>
+      <div class="pull-attr">Prospectiva 2035 · Projecció estructural</div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">II · El mapa que es redibui­xa</span>
+      <h2>Països que s'encongeixen, països que aguanten</h2>
+
+      <div class="data-aside">
+        <div class="data-aside-title">Projeccions edat mediana 2035</div>
+        <table>
+          <tr><td>Itàlia</td><td>~51 a.</td></tr>
+          <tr><td>Portugal</td><td>~50 a.</td></tr>
+          <tr><td>Grècia</td><td>~50 a.</td></tr>
+          <tr><td>Bulgària</td><td>~50 a.</td></tr>
+          <tr><td>Alemanya</td><td>~48 a.</td></tr>
+          <tr><td>UE-27</td><td>~47 a.</td></tr>
+          <tr><td>França</td><td>~45 a.</td></tr>
+          <tr><td>Suècia</td><td>~42 a.</td></tr>
+          <tr><td>Irlanda</td><td>~41 a.</td></tr>
+        </table>
+      </div>
+
+      <p>Les diferències entre estats membres, ja marcades avui, s'aprofundiran d'aquí a 2035. El mapa demogràfic d'Europa es polaritzarà entre un sud i un est que envelleixen a ritme accelerat i un nord i un oest que, gràcies a polítiques familiars més sòlides i fluxos migratoris més ben gestionats, mantindran estructures comparativament més joves.</p>
+
+      <p>Itàlia és el cas extrem que centra l'atenció dels demògrafs. Si la tendència actual es manté, l'edat mediana italiana podria superar els 51 anys el 2035. Seria el primer país gran de la història contemporània a assolir aquesta fita. Les seves implicacions no són tan sols estadístiques: un país amb una edat mediana de 51 anys té una majoria electoral de majors de 50 anys. Això vol dir que, en democràcia, les polítiques destinades a les persones grans tindran sempre una base de suport majoritari, mentre les inversions en educació, infància o habitatge per a joves tindran cada cop menys pes electoral. És el que alguns politòlegs anomenen la "gerontocracia involuntària": no pas perquè ningú la vulgui, sinó perquè la democràcia reflecteix l'estructura de la societat que la practica.</p>
+
+      <p>Romania, Bulgària i els països bàltics afrontaran una situació diferent però igualment severa: no tan sols envelliran, sinó que continuaran perdent població per emigració. La combinació de baixa natalitat, envelliment accelerat i emigració dels joves cap a l'Europa occidental pot crear en alguns d'aquests territoris una espiral autoreforçant difícil de trencar: menys joves vol dir menys natalitat futura, que vol dir menys treballadors, que vol dir menys serveis, que vol dir menys atractiu per a qui es planteja quedar-se o tornar. Letònia ja ha perdut el 17% de la seva població en vint anys. Si la tendència no s'inverteix, el 2035 haurà perdut un quart de la que tenia el 2005.</p>
+
+      <p>A l'altre extrem, Irlanda i Suècia consolidaran la seva posició com els països estructuralment més joves de la UE, amb edats medianes al voltant dels 41-42 anys. Luxemburg, alimentat per la immigració comunitària, mantindrà la seva singularitat. Però fins i tot en aquests casos, l'envelliment serà una realitat creixent: la direcció és la mateixa arreu, la velocitat és el que varia.</p>
+    </div>
+
+    <div class="ornament">— · —</div>
+
+    <div class="section">
+      <span class="section-label">III · El mercat laboral del 2035</span>
+      <h2>Treballar més anys, en un mercat que canvia de forma</h2>
+
+      <p>El mercat laboral europeu de 2035 serà irreconeixible per als paràmetres amb els quals el vam heredar del segle XX. La pressió combinada de l'envelliment i la transformació tecnològica —automatització, intel·ligència artificial, robotització— crearà un escenari de tensions creuades que les polítiques laborals actuals no estan preparades per gestionar.</p>
+
+      <p>D'una banda, hi haurà menys treballadors disponibles en termes absoluts i relatius. La cohort dels nascuts als anys seixanta i setanta abandonarà el mercat laboral massivament durant la pròxima dècada. Les empreses europees en sectors intensius en mà d'obra —logística, hostaleria, construcció, agricultura, atenció a les persones— ja noten la tensió avui. El 2035, aquesta tensió serà estructural en la majoria de sectors i regions. La competència per atraure i retenir treballadors qualificats —i fins i tot poc qualificats— s'intensificarà entre empreses i entre països.</p>
+
+      <p>De l'altra, l'automatització avançarà sobre feines que avui ocupen milions de persones. La paradoxa demogràfica europea del 2035 podria ser aquesta: dèficit de treballadors en alguns sectors i atur tecnològic en d'altres, simultàniament. Una part dels que perdin la feina per l'automatització seran treballadors d'entre 50 i 65 anys amb poca capacitat de reconversió ràpida. El risc és que la transició tecnològica i la transició demogràfica es retroalimentin negativament, creant bosses de treballadors grans sense feina ni pensió plena, amb costos socials i polítics difícils de quantificar avui.</p>
+
+      <p>L'allargament de la vida laboral serà inevitable. Parlar d'una edat de jubilació de 67 o fins i tot 68 anys el 2035 no és ciència-ficció: és la projecció directa de les reformes que ja s'han anunciat o implementat a Alemanya, els Països Baixos, Suècia o el Regne Unit. La qüestió no és si els europeus treballaran més anys, sinó en quines condicions ho faran i quines polítiques actives —formació continuada, adaptació de llocs de treball, prevenció de la discriminació per edat— acompanyaran aquest allargament.</p>
+    </div>
+
+    <div class="pull">
+      <p class="pull-text">"La paradoxa laboral del 2035 podria ser aquesta: dèficit de treballadors en sectors essencials i atur tecnològic en d'altres, al mateix temps, en el mateix continent. La transició demogràfica i la revolució de la IA coincidiran en el temps sense que cap política hagi previst la seva intersecció."</p>
+      <div class="pull-attr">Prospectiva 2035 · Mercat laboral</div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">IV · Sanitat i dependència</span>
+      <h2>El gran repte fiscal de la dècada</h2>
+
+      <p>Si hi ha un àmbit on l'impacte de l'envelliment serà més immediat i més visible, és la sanitat i l'atenció a la dependència. Els 35 milions de majors de 80 anys que la UE tindrà previsiblement el 2035 representaran una demanda d'atenció sanitària i social d'una magnitud sense precedents. No és tan sols una qüestió de volum: és una qüestió de complexitat. Les persones de més de 80 anys concentren les patologies cròniques, les polifarmàcies, les síndromes geriàtriques, les demències. Cada any addicional d'esperança de vida a partir dels 80 és, estadísticament, un any amb un cost sanitari molt superior a la mitjana.</p>
+
+      <p>Les projeccions apunten que la despesa pública en sanitat i dependència podria augmentar entre 1,5 i 2,5 punts del PIB a la majoria de països de la UE durant la pròxima dècada, únicament per l'efecte demogràfic, sense comptar les innovacions tecnològiques en medicina que podrien incrementar el cost unitari dels tractaments. Per a països com Itàlia, Grècia o Portugal, que ja parteixen d'una situació fiscal tensada, això representa un repte d'estabilitat pressupostària de primer ordre.</p>
+
+      <p>La crisi de la dependència serà, potser, el fenomen social més visible del 2035. Avui, una part significativa de l'atenció a les persones grans la proporciona la família, i molt especialment les dones de la família. Però les generacions que haurien d'exercir aquest rol —les nascudes als anys setanta i vuitanta— seran més petites, hauran tingut menys fills i tindran elles mateixes edats avançades. La disponibilitat de cuidadors informals es reduirà precisament quan la demanda de cures s'incrementi. La pressió per professionalitzar i finançar públicament l'atenció a la dependència serà, el 2035, inajornable en tots els grans països de la UE.</p>
+
+      <div class="inline-highlight">
+        Espanya, que avui té una de les esperances de vida més altes d'Europa, tindrà el 2035 una de les poblacions de majors de 80 anys més nombroses del continent en termes relatius. El Sistema per a l'Autonomia i l'Atenció a la Dependència —ja avui infrafinançat— afrontarà una pressió que cap de les seves reformes actuals ha anticipat adequadament.
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">V · La immigració el 2035</span>
+      <h2>Més necessària, més complexa, més inevitable</h2>
+
+      <p>Si la demografia és l'aritmètica, la immigració és la incògnita política. Les projeccions demogràfiques indiquen que, sense fluxos migratoris sostinguts, la població activa europea es contraurà de manera significativa durant la propera dècada. La Comissió Europea i el BCE han documentat en múltiples informes que l'economia europea necessita desenes de milions de treballadors addicionals per mantenir els nivells actuals de producció i finançar els sistemes de protecció social. No és una opinió ideològica: és una necessitat estructural que els models econòmics projecten amb considerable consistència.</p>
+
+      <p>El 2035, la immigració haurà crescut en volum —perquè les forces que l'impulsen, tant des dels països d'origen com des dels de destinació, s'intensificaran— però el debat polític al seu voltant serà probablement més tens que avui. Les societats europees hauran incorporat una proporció creixent de residents d'origen estranger, amb totes les riqueses i els reptes que això comporta. I ho hauran fet en un context en el qual els sistemes públics —sanitat, habitatge, escola, transport— ja estaran sota pressió per la demanda generada per l'envelliment de la població autòctona.</p>
+
+      <p>El risc és que la competència pels recursos públics escassos —llits d'hospital, places d'escola, habitatge assequible— es converteixi en un terreny fèrtil per a narratives de competència entre col·lectius, d'immigrants contra jubilats, de joves migrants contra joves autòctons. Aquesta narrativa ja existeix avui en estat embrionari en diversos països europeus. El 2035, si les polítiques d'integració i de finançament públic no han avançat de forma substancial, podria ser una narrativa dominant. La política d'immigració del 2035 no s'explica sense la política de despesa pública del 2025. Les decisions que es prenguin —o no es prenguin— en aquesta dècada determinaran quin tipus de societats rebran els nous residents i en quines condicions.</p>
+    </div>
+
+    <div class="ornament">— · —</div>
+
+    <div class="section">
+      <span class="section-label">VI · Els territoris del 2035</span>
+      <h2>Deserts demogràfics i metròpolis saturades</h2>
+
+      <p>La polarització territorial que ja és visible avui s'accentuarà de forma dramàtica d'aquí a 2035. Les grans àrees metropolitanes europees —París, Madrid, Barcelona, Milà, Berlín, Amsterdam, Varsòvia— continuaran atraient les generacions joves, tant les autòctones com les immigrades. Crearan riquesa, generaran innovació, concentraran serveis i oportunitats. Però ho faran a un cost creixent en termes d'habitatge, mobilitat i qualitat de vida, i alimentaran la sensació d'exclusió dels que viuen fora del seu radi d'influència.</p>
+
+      <p>Mentre tant, una part significativa del territori europeu —les comarques rurals profundes d'Espanya, de Portugal, de Romania, de Grècia, de l'est d'Alemanya, de moltes regions d'Itàlia— hauria assolit el 2035 un estat que els demògrafs anomenen "declivi terminal": una combinació d'envelliment extrem, emigració sostinguda i davallada de serveis que es retroalimenta fins a fer pràcticament impossible la recuperació sense una intervenció externa massiva i sostinguda. En alguns d'aquests territoris, la proporció de majors de 65 anys podria superar el 40% de la població resident.</p>
+
+      <p>Gestionar políticament aquest contrast serà un dels reptes de governança més difícils de la dècada. Les inversions necessàries per mantenir serveis mínims en territoris de baixa densitat i envelliment extrem seran molt costoses per habitant. I el debat sobre si destinar recursos escassos a revertir el declivi d'aquests territoris o a invertir en les zones de creixement on l'impacte econòmic és major serà, en molts parlaments, un debat de fons que definirà aliances polítiques i fractures electorals.</p>
+    </div>
+
+    <div class="pull">
+      <p class="pull-text">"El 2035, algunes comarques d'Europa hauran assolit el que els demògrafs anomenen 'declivi terminal': una espiral d'envelliment, emigració i reducció de serveis que es retroalimenta fins a fer pràcticament impossible la recuperació espontània."</p>
+      <div class="pull-attr">Prospectiva 2035 · Dinàmiques territorials</div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">VII · Allò que podria canviar-ho tot</span>
+      <h2>Les variables que aquest exercici no pot controlar</h2>
+
+      <p>Tot exercici de prospectiva responsable ha d'identificar els seus límits. L'escenari de continuïtat que hem descrit fins aquí és el més probable, però no és l'únic possible. Hi ha forces que podrien alterar les tendències de manera significativa i que convé esmentar, no per donar esperances infundades, sinó per assenyalar on podrien estar les palanques reals del canvi.</p>
+
+      <p>La primera és tecnològica. Els avenços en medicina regenerativa, en tractament de les demències, en robòtica assistencial i en diagnosi predictiva podrien canviar radicalment el cost i la qualitat de l'atenció a les persones grans. Si el 2035 existeix una teràpia efectiva contra l'Alzheimer —avui en fase avançada d'investigació en diversos laboratoris—, el patró de demanda sanitària dels majors de 80 anys canviaria de forma substancial. Si la robòtica de cura avança a la velocitat que pronostiquen els experts japonesos —el país que porta dècades enfrontant el mateix envelliment que Europa encara—, el dèficit de cuidadors podria ser parcialment cobert per màquines. Res d'això és segur. Tot és plausible.</p>
+
+      <p>La segona és política. Una reforma substancial dels sistemes de conciliació familiar —permisos de paternitat i maternitat igualitaris, xarxa pública d'educació infantil de 0 a 3 anys universal, habitatge assequible per a famílies joves— podria incrementar gradualment la natalitat en alguns països. Els efectes demogràfics d'una política natalista ambiciosa triguen entre quinze i vint anys a ser estadísticament significatius: les polítiques familiars d'avui seran els treballadors de 2040-2045. Però si els governs europeus no les implementen en aquesta dècada, el 2035 marcarà el punt de no retorn per a la propera generació.</p>
+
+      <p>La tercera és migratòria. Una política migratòria europea realment coordinada —que distribuís els fluxos de forma equitativa entre estats membres, que invertís en integració real, que obrís vies legals ordenades per a la migració laboral— podria compensar una part substancial del dèficit demogràfic. Les projeccions indiquen que la demanda de treballadors que Europa tindrà el 2035 és perfectament cobrible amb els fluxos migratoris existents, si la gestió política ho permetés. El problema no és demogràfic: és de voluntat política i de capacitat institucional.</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">VIII · Conclusió prospectiva</span>
+      <h2>El 2035 ja ha començat</h2>
+
+      <p>D'aquí a deu anys, si les tendències actuals es mantenen, Europa tindrà una edat mediana d'aproximadament 47 anys, un de cada quatre habitants per sobre dels 65, i prop de 35 milions de persones per sobre dels 80. Tindrà un mercat laboral sota pressió creixent, sistemes de protecció social reformats per la necessitat més que per la previsió, i una geografia interior cada cop més polaritzada entre metròpolis dinàmiques i territoris en declivi accelerat. La immigració haurà crescut, el debat sobre ella s'haurà intensificat, i la capacitat d'integració de les societats receptores s'haurà posat a prova de manera definitiva.</p>
+
+      <p>Res d'això és inevitable en els seus detalls. Però el vector general sí que ho és: l'envelliment continua, la piràmide segueix invertint-se, i el marge de maniobra per actuar preventivament es redueix any rere any. La diferència entre el 2035 que podria ser i el 2035 que probablement serà la farà —o no la farà— la qualitat de les decisions polítiques que els governs europeus prenguin entre avui i el final d'aquesta dècada.</p>
+
+      <p>La demografia no espera. I el rellotge, com sempre, segueix endavant.</p>
+    </div>
+
+    <div class="source-note">
+      Exercici de prospectiva elaborat a partir de: Eurostat, <em>Demography of Europe – 2026 edition</em> (21 maig 2026); Eurostat Population Projections (EUROPOP); BCE, <em>The impact of population ageing on euro area monetary policy</em>; Comissió Europea, <em>Ageing Report 2024</em>; OMS, <em>World Report on Ageing and Health</em>. Les projeccions numèriques s'han construït per extrapolació de les tendències documentades i no constitueixen dades oficials d'Eurostat.
+    </div>
+
+  </div>
+</article>
+
